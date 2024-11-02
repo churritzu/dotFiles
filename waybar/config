@@ -1,0 +1,46 @@
+// -*- mode: jsonc -*-
+[
+{
+    "height": 30, 
+    "margin-top": 3,
+    "output": "DP-1",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+    // Modules configuration
+    "include": ["~/.config/waybar/modules.json"],
+
+    // Choose the order of the modules
+    "modules-left": [
+        "group/workspace",
+        "group/windows",
+        "custom/media"
+    ],
+    "modules-center": [
+        "group/l-clock",
+        "clock",
+        "group/r-clock",
+    ],
+    "modules-right": [
+        "mpd", // Se supone que es para la música
+        "group/g-system",
+        "group/audio",
+        "group/g-power"
+    ]
+},
+{
+    "height": 30, 
+    "margin-top": 3,
+    "output": "DP-2",
+
+    "include": ["~/.config/waybar/modules-second.json"],
+
+    "modules-center": [
+        "group/l-clock",
+        "clock",
+        "group/r-clock"
+    ],
+}
+]

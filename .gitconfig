@@ -1,0 +1,7 @@
+[user]
+	email = churritzu@yahoo.com
+	name = Churritzu
+[core]
+	editor = vim
+[init]
+	defaultBranch = main

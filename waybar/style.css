@@ -1,0 +1,143 @@
+/* @define-color bg #1e1e2e; */
+/* @define-color fg #d8dee9; */
+
+* {
+  font-family: "FiraCode Nerd Font";
+  font-weight: bold;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #d8dee9;
+}
+
+tooltip {
+  background-color: #1e1e2e;
+  color: #d8dee9;
+  border-radius: 7px;
+  border-width: 0px;
+}
+
+#l-clock,
+#r-clock,
+#r-workspaces,
+#l-window,
+#r-window,
+#l-power,
+#l-audio,
+#r-audio,
+#l-system,
+#r-system {
+  background: transparent;
+  min-height: 0px;
+}
+
+#r-workspaces {
+  border-left: 15px solid #1e1e2e;
+  border-bottom: 30px solid transparent;
+}
+
+#workspaces button {
+  color: #d8dee9;
+}
+
+#workspaces {
+  padding: 0px 10px;
+  background-color: #1e1e2e;
+  font-weight: normal;
+}
+
+#windows {
+  margin-left: -15px;
+}
+
+#l-window {
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #535380;
+  margin-left: 0px;
+}
+
+#r-window {
+  border-left: 15px solid #535380;
+  border-bottom: 30px solid transparent;
+}
+
+#window {
+  padding: 0px 10px;
+  background-color: #535380;
+}
+
+#l-clock {
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #1e1e2e;
+}
+
+#r-clock {
+  border-left: 15px solid #1e1e2e;
+  border-bottom: 30px solid transparent;
+}
+
+#clock {
+  padding: 0px 10px;
+  background-color: #1e1e2e;
+}
+
+#l-power {
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #1e1e2e;
+}
+
+#power {
+  padding: 0px 10px;
+  background-color: #1e1e2e;
+}
+
+#g-power {
+  margin-left: -15px;
+}
+
+#idle_inhibitor {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#l-audio {
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #535380;
+}
+
+#r-audio {
+  border-left: 15px solid #535380;
+  border-bottom: 30px solid transparent;
+}
+
+#pulseaudio {
+  padding: 0px 10px;
+  background-color: #535380;
+}
+
+#audio {
+  margin-left: -15px;
+}
+
+#l-system {
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #1e1e2e;
+}
+
+#r-system {
+  border-left: 15px solid #1e1e2e;
+  border-bottom: 30px solid transparent;
+}
+
+#system {
+  padding: 0px 10px;
+  background-color: #1e1e2e;
+}
+
+#weather {
+  padding: 0px 10px;
+  background-color: yellow;
+}
