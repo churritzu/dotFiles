@@ -18,6 +18,7 @@ alias ls='lsd'
 alias vim="nvim"
 alias oldvim="vim"
 alias kssh="kitten ssh"
+alias cat="bat"
 # alias ytfzf="ytfzf -t -T chafa --sort --thumbnail-quality=maxres "
 
 # User specific aliases and functions
@@ -88,3 +89,4 @@ eval "$(fzf --bash)"
 
 # System Information
 neofetch
+
