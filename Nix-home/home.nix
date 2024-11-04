@@ -12,6 +12,7 @@
     # Terminal
     pkgs.btop
     pkgs.fd
+    pkgs.git
     pkgs.lsd
     pkgs.ncdu
     pkgs.neofetch
@@ -27,7 +28,7 @@
    "discord"
  ];
 
-  home.file."./wezterm.lua".source = ../wezterm.lua;
+  home.file."./.wezterm.lua".source = ../wezterm.lua;
   home.file."./.gitconfig".source = ../gitconfig;
   home.file."./.tmux.conf".source = ../tmux.conf;
   home.file."./.vimrc".source = ../vimrc;
