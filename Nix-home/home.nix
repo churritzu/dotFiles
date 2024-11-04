@@ -27,8 +27,11 @@
    "discord"
  ];
 
-  home.file = {
-  };
+  home.file."./wezterm.lua".source = ../wezterm.lua;
+  home.file."./.gitconfig".source = ../gitconfig;
+  home.file."./.tmux.conf".source = ../tmux.conf;
+  home.file."./.vimrc".source = ../vimrc;
+  home.file."./.bashrc".source = ../bashrc;
 
   home.sessionVariables = {
     # EDITOR = "emacs";
