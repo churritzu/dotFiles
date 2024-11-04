@@ -6,9 +6,8 @@ add_newline = true
 
 # Use custom format
 format = '''
-[┌─[$username$hostname$directory](black bg:yellow)─────────────>](bold yellow)
-[│](bold green)$all
-[└─>](bold yellow)'''
+[┌[ $username$hostname  $directory](black bg:yellow)](bold yellow)
+[└>](bold yellow)$all'''
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
@@ -23,11 +22,14 @@ disabled = false
 disabled = false
 
 [hostname]
-ssh_symbol = '[@](bold black bg:yellow)'
+ssh_symbol = '[](bold black bg:yellow)'
 style = 'bold black bg:yellow'
+ssh_only = false
+format = '[$hostname]($style) in '
 
 [username]
 format = '[$user]($bold black bg:yellow)'
+show_always = true
 
 [directory]
 truncation_symbol = '…/'

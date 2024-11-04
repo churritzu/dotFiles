@@ -17,6 +17,7 @@
     pkgs.ncdu
     pkgs.neofetch
     pkgs.ranger
+    pkgs.starship
     pkgs.tldr
     pkgs.yt-dlp
 
@@ -33,6 +34,8 @@
   home.file."./.tmux.conf".source = ../tmux.conf;
   home.file."./.vimrc".source = ../vimrc;
   home.file."./.bashrc".source = ../bashrc;
+  home.file."./.bash_profile".source = ../bash_profile;
+  home.file."./.config/starship/starship.toml".source = ../starship/starship.toml;
 
   home.sessionVariables = {
     # EDITOR = "emacs";
