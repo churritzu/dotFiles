@@ -1,0 +1,44 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Use custom format
+format = '''
+[┌─[$username$hostname$directory](black bg:yellow)─────────────>](bold yellow)
+[│](bold green)$all
+[└─>](bold yellow)'''
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[❯](bold yellow)'
+# success_symbol = '[➜](color yellow)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[os]
+disabled = false
+
+[hostname]
+ssh_symbol = '[@](bold black bg:yellow)'
+style = 'bold black bg:yellow'
+
+[username]
+format = '[$user]($bold black bg:yellow)'
+
+[directory]
+truncation_symbol = '…/'
+style = 'bold black bg:yellow'
+
+[git_branch]
+format = ' [$symbol$branch(:$remote_branch)]($style) '
+
+[php]
+version_format = 'v${major}.${minor}'
+
+[os.symbols]
+Ubuntu = '[ ](bold red)'
+Fedora = ' '
