@@ -4,7 +4,7 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Use custom format
+# Use custom format │
 format = '''
 [┌[ $username$hostname  $directory](black bg:yellow)](bold yellow)
 [└>](bold yellow)$all'''
