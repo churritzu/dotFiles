@@ -3,7 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
         # terminal
-        starship
+        hello
         # visual packages.
     ];
 }

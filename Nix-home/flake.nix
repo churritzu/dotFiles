@@ -11,11 +11,30 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, nix-stable, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-stable = nix-stable.legacyPackages.${system};
     in {
+
+      nixConfigurations = {
+        "tupa" = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit pkgs; };
+
+
+          nixpkgs.config.allowUnfree = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+            "discord"
+          ];
+
+
+
+          # modules = [ ./system.nix ];
+        };
+      };
+        
+      # Home Manager configuration
       homeConfigurations = {
         "tupa" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
