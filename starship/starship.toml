@@ -38,6 +38,9 @@ style = 'bold black bg:yellow'
 [git_branch]
 format = ' [$symbol$branch(:$remote_branch)]($style) '
 
+[bun]
+symbol = '󰤇 '
+
 [php]
 version_format = 'v${major}.${minor}'
 
