@@ -14,26 +14,25 @@
   outputs = { nixpkgs, nix-stable, home-manager, ... }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
       pkgs-stable = nix-stable.legacyPackages.${system};
+      pkgs = import nixpkgs { system = "x86_64-linux"; };
     in {
 
-      nixConfigurations = {
-        "tupa" = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit pkgs; };
+        # OPCIONES: 
+        ## Executed by `nix build .#<name>`
+        # packages."<system>"."<name>" = derivation;
+        ## Executed by `nix build .`
+        # packages."<system>".default = derivation;
 
-
-          nixpkgs.config.allowUnfree = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
-            "discord"
-          ];
-
-
-
-          # modules = [ ./system.nix ];
+        packages.x86_64-linux.default = pkgs.mkShell {
+            name = "terminal";
+            buildInputs = [
+              # pkgs.ranger
+              # pkgs.neofetch
+              pkgs.btop
+            ];
         };
-      };
-        
+
       # Home Manager configuration
       homeConfigurations = {
         "tupa" = home-manager.lib.homeManagerConfiguration {
@@ -47,3 +46,5 @@
     };
   };
 }
+
+# export NIX_TMPDIR=/tmp/nix-tmp
