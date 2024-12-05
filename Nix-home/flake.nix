@@ -29,7 +29,7 @@
             buildInputs = [
               # pkgs.ranger
               # pkgs.neofetch
-              pkgs.btop
+              # pkgs.btop
             ];
         };
 
