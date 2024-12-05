@@ -60,7 +60,10 @@ return {
 			lspconfig.pyright.setup({ capabilities })
 			lspconfig.vuels.setup({ capabilities })
 			lspconfig.yamlls.setup({ capabilities })
-			lspconfig.tailwindcss.setup({ capabilities })
+			lspconfig.tailwindcss.setup({
+				capabilities,
+				filetypes = { "html", "css", "vue", "javascript", "svelte", "typescript" },
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
