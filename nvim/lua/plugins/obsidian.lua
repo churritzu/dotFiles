@@ -13,8 +13,8 @@ return {
 		},
 		workspaces = {
 			{
-				name = "Fedora",
-				path = "/home/tupa/Documents/Tupa Fedora",
+				name = "Tupa",
+				path = "/home/tupa/Documents/TupaNotes",
 			},
 		},
 		notes_subdir = "05 - Fleeting",
