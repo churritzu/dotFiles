@@ -22,6 +22,7 @@ return {
 					"eslint",
 					"jsonls",
 					"lua_ls",
+					"markdown_oxide",
 					"intelephense",
 					"tailwindcss",
 					"pyright",
@@ -60,6 +61,7 @@ return {
 			lspconfig.pyright.setup({ capabilities })
 			lspconfig.vuels.setup({ capabilities })
 			lspconfig.yamlls.setup({ capabilities })
+			lspconfig.markdown_oxide.setup({ capabilities })
 			lspconfig.tailwindcss.setup({
 				capabilities,
 				filetypes = { "html", "css", "vue", "javascript", "svelte", "typescript" },
