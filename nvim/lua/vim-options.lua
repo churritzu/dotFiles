@@ -28,6 +28,9 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldcolumn = "1"
 
+-- For Obsidian
+vim.o.conceallevel = 1
+
 --
 -- Insert Mode
 --
