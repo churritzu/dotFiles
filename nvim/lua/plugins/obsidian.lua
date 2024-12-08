@@ -19,7 +19,7 @@ return {
 		},
 		notes_subdir = "05 - Fleeting",
 		new_notes_location = "05 - Fleeting",
-		open_notes_in = "vsplit",
+		open_notes_in = "hsplit",
 		note_id_func = function(title)
 			-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
 			-- In this case a note with the title 'My new note' will be given an ID that looks
@@ -62,7 +62,7 @@ return {
 		},
 
 		daily_notes = {
-			folder = "Daily",
+			folder = "06 - Daily",
 			date_format = "%Y-%m-%d",
 			alias_format = "%B %-d, %Y",
 			default_tags = { "daily-notes" },
