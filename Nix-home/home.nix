@@ -40,6 +40,7 @@
 
   home.file."./.wezterm.lua".source = ../wezterm.lua;
   home.file."./.gitconfig".source = ../gitconfig;
+  home.file."./.taskrc".source = ../taskrc;
   home.file."./.tmux.conf".source = ../tmux.conf;
   home.file."./.vimrc".source = ../vimrc;
   home.file."./.bashrc".source = ../bashrc;
