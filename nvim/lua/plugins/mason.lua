@@ -68,9 +68,11 @@ return {
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.references, { desc = "Go to references" })
+			vim.keymap.set("n", "<leader>ci", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+			vim.keymap.set("n", "<leader>co", vim.lsp.buf.document_symbol, { desc = "Go to document symbol" })
+			vim.keymap.set("n", "<leader>cR", vim.lsp.buf.rename, { desc = "Rename all references" })
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 		end,
 	},

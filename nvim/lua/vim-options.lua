@@ -63,5 +63,5 @@ vim.keymap.set("n", "<leader>nh", ":sp<cr>", { desc = "Split Horizonal" })
 vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "All windows same size." })
 
 -- Code
-vim.keymap.set("n", "<A-/>", ":Commentary<cr>", { desc = "Toggle Comments" })
+vim.keymap.set("n", "gc", "<nop>", { desc = "Disabled" })
 vim.keymap.set("n", "<localleader>rp", ":!./phpunit<cr>", { desc = "Run PHPUnit" })
