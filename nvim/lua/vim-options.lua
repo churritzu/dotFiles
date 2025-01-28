@@ -82,7 +82,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Para PHP
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "python",
+	pattern = "php",
 	callback = function()
 		vim.api.nvim_buf_set_keymap(
 			0,
