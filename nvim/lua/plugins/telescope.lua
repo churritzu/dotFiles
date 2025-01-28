@@ -15,6 +15,7 @@ return {
 			telescope.load_extension("fzf")
 			telescope.load_extension("telescope-tabs")
 			telescope.load_extension("emoji")
+			telescope.load_extension("notify")
 
 			telescope.setup({
 				defaults = {
