@@ -1,0 +1,28 @@
+# tokyonight ->
+background-opacity=0.85
+background-blur-radius=20
+
+font-family="FiraCode Nerd Font Mono"
+font-size=12
+
+cursor-style-blink=false
+cursor-style=block
+gtk-tabs-location=bottom
+
+confirm-close-surface=false
+window-decoration=true
+window-padding-x=10
+window-padding-y=10
+window-padding-balance=true
+
+auto-update = check
+keybind=super+i=inspector:toggle
+
+mouse-hide-while-typing=true
+
+
+theme="tokyonight"
+
+gtk-titlebar=false
+
+
