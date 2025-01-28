@@ -5,6 +5,6 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-neofetch
+neofetch --ascii ~/Pictures/ASCII/kawaii.ascii
 
 # User specific environment and startup programs
