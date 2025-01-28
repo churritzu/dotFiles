@@ -53,14 +53,57 @@ vim.keymap.set("n", "<C-k>", ":resize -3<CR>", { desc = "Vertical Resize Up" })
 vim.keymap.set("n", "<C-l>", ":vertical resize +3<CR>", { desc = "Vertical Resize Left" })
 vim.keymap.set("n", "<C-j>", ":resize +3<CR>", { desc = "Vertical Resize Down" })
 
--- Tabs
--- vim.cmd("noremap <Tab> :tabnext<CR>")
--- vim.cmd("noremap <S-Tab> :tabprevious<CR>")
-
 -- windows
-vim.keymap.set("n", "<leader>nv", ":vsplit<cr>", { desc = "Split Vertical" })
-vim.keymap.set("n", "<leader>nh", ":sp<cr>", { desc = "Split Horizonal" })
+vim.keymap.set("n", "<leader>sv", ":vs<cr>", { desc = "Split Vertical" })
+vim.keymap.set("n", "<leader>sh", ":sp<cr>", { desc = "Split Horizonal" })
 vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "All windows same size." })
 
+-- Notifications
+vim.keymap.set("n", "<leader>nf", ":NoiceTelescope<cr>", { desc = "Telescope Notifications" })
+vim.keymap.set("n", "<leader>nl", ":NoiceLast<cr>", { desc = "Last Notifications" })
+vim.keymap.set("n", "<leader>na", ":NoiceAll<cr>", { desc = "Last Notifications" })
+
 -- Code
-vim.keymap.set("n", "<localleader>rp", ":!./phpunit<cr>", { desc = "Run PHPUnit" })
+vim.keymap.set("n", "<leader>cz", ":Twilight<cr>", { desc = "Toggle Twilight Focus" })
+
+-- Para JavaScript
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "javascript",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<localleader>r",
+			":w<CR>:!node %<CR>",
+			{ desc = "Run File", noremap = true, silent = true }
+		)
+	end,
+})
+
+-- Para PHP
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "python",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<localleader>r",
+			":w<CR>:!php %<CR>",
+			{ desc = "Run File", noremap = true, silent = true }
+		)
+	end,
+})
+
+-- Para Python
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "python",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<localleader>r",
+			":w<CR>:!python %<CR>",
+			{ desc = "Run File", noremap = true, silent = true }
+		)
+	end,
+})
