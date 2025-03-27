@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("kulala").setup({
 			split_direction = "horizontal",
-			display_mode = "float", -- split
+			display_mode = "split", -- float
 			q_to_close_float = true,
 			default_winbar_panes = { "body", "headers", "headers_body", "stats", "script_output", "verbose" },
 			winbar = true,
