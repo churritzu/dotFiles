@@ -18,6 +18,7 @@ alias vim="nvim"
 alias oldvim="vim"
 alias kssh="kitten ssh"
 alias cat="bat"
+alias top="btop"
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
