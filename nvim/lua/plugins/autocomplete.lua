@@ -65,6 +65,11 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = cmp.config.sources({
+					-- {
+					-- 	per_file_type = {
+					-- 		codecompanion = { "codecompanion" },
+					-- 	},
+					-- },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "buffer" },
