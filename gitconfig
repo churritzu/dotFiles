@@ -7,3 +7,5 @@
 	defaultBranch = main
 [help]
 	autocorrect = immediate
+[commit]
+	verbose = true
