@@ -5,3 +5,5 @@
 	editor = vim
 [init]
 	defaultBranch = main
+[help]
+	autocorrect = immediate

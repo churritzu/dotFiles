@@ -10,28 +10,28 @@
 
  home.packages = [
     # Terminal
-    pkgs.btop
-    pkgs.fd
-    pkgs.git
-    pkgs.lsd
-    pkgs.ncdu
-    pkgs.neofetch
+    # pkgs.btop
+    # pkgs.fd
+    # pkgs.git
+    # pkgs.lsd
+    # pkgs.ncdu
+    # pkgs.neofetch
     #pkgs.ranger
-    pkgs.starship
-    pkgs.tldr
-    pkgs.yt-dlp
+    # pkgs.starship
+    # pkgs.tldr
+    # pkgs.yt-dlp
     pkgs.kanata
-    pkgs.lazygit
-    pkgs.zoxide
-    pkgs.fzf
-    pkgs.entr
-    pkgs.just
-    pkgs.taskwarrior3
-    pkgs.pet
+    # pkgs.lazygit
+    # pkgs.zoxide
+    # pkgs.fzf
+    # pkgs.entr
+    # pkgs.just
+    # pkgs.taskwarrior3
+    # pkgs.pet
 
     # visual packages.
-    pkgs.discord
-    pkgs.dbeaver-bin
+    # pkgs.discord
+    # pkgs.dbeaver-bin
   ];
 
  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
