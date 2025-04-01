@@ -20,6 +20,7 @@ vim.o.scrolloff = 8
 vim.o.clipboard = "unnamed,unnamedplus"
 vim.o.mouse = "a"
 vim.o.colorcolumn = "80"
+vim.o.undodir=~/.config/nvim/undo
 
 -- Folding
 vim.o.foldenable = true
