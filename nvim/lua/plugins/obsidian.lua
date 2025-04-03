@@ -34,7 +34,7 @@ return {
 					suffix = suffix .. string.char(math.random(65, 90))
 				end
 			end
-			return tostring(os.time()) .. "-" .. suffix
+			return tostring(os.date("%Y%m%d%H%M")) .. "-" .. suffix
 		end,
 		note_frontmatter_func = function(note)
 			if note.title then
@@ -60,7 +60,6 @@ return {
 		daily_notes_template = {
 			template = "daily-note-template.md",
 		},
-
 		daily_notes = {
 			folder = "06 - Daily",
 			date_format = "%Y-%m-%d",
