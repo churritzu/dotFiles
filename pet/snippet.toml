@@ -1,0 +1,7 @@
+
+[[Snippets]]
+  Description = "Update the nix channel packages & then update the home manager installed apps"
+  Output = ""
+  Tag = ["nix", "home-manager", "bash"]
+  command = "sudo -i nix-channel --update && home-manager switch --flake ~/Dotfiles/Nix-home/.#tupa"
+
