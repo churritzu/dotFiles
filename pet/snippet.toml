@@ -5,3 +5,8 @@
   Tag = ["nix", "home-manager", "bash"]
   command = "sudo -i nix-channel --update && home-manager switch --flake ~/Dotfiles/Nix-home/.#tupa"
 
+[[Snippets]]
+  Description = "Update Lazydocker"
+  Output = ""
+  Tag = ["Docker", "Containers", "Dev"]
+  command = "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash"
