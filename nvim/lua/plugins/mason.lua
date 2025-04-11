@@ -35,37 +35,33 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			{ "antosha417/nvim-lsp-file-operations", config = true },
-			{ "folke/neodev.nvim", opts = {} },
-		},
+		-- dependencies = { "saghen/blink.cmp" },
 		config = function()
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
-			local capabilities = cmp_nvim_lsp.default_capabilities()
-
 			local lspconfig = require("lspconfig")
-			lspconfig.angularls.setup({ capabilities })
-			lspconfig.bashls.setup({ capabilities })
-			lspconfig.cssls.setup({ capabilities })
-			lspconfig.css_variables.setup({ capabilities })
-			lspconfig.dockerls.setup({ capabilities })
-			lspconfig.docker_compose_language_service.setup({ capabilities })
-			lspconfig.emmet_ls.setup({ capabilities })
-			lspconfig.html.setup({ capabilities })
-			lspconfig.ts_ls.setup({ capabilities })
-			lspconfig.eslint.setup({ capabilities })
-			lspconfig.jsonls.setup({ capabilities })
-			lspconfig.lua_ls.setup({ capabilities })
-			lspconfig.intelephense.setup({ capabilities })
-			lspconfig.pyright.setup({ capabilities })
-			lspconfig.vuels.setup({ capabilities })
-			lspconfig.yamlls.setup({ capabilities })
-			lspconfig.markdown_oxide.setup({ capabilities })
+			local nvim_capabilities = vim.lsp.protocol.make_client_capabilities()
+			local capabilities = require("blink.cmp").get_lsp_capabilities(nvim_capabilities)
+
+			lspconfig.angularls.setup({ capabilities = capabilities })
+			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.cssls.setup({ capabilities = capabilities })
+			lspconfig.css_variables.setup({ capabilities = capabilities })
+			lspconfig.dockerls.setup({ capabilities = capabilities })
+			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
+			lspconfig.emmet_ls.setup({ capabilities = capabilities })
+			lspconfig.eslint.setup({ capabilities = capabilities })
+			lspconfig.html.setup({ capabilities = capabilities })
+			lspconfig.intelephense.setup({ capabilities = capabilities })
+			lspconfig.jsonls.setup({ capabilities = capabilities })
+			lspconfig.markdown_oxide.setup({ capabilities = capabilities })
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.tailwindcss.setup({
-				capabilities,
+				capabilities = capabilities,
 				filetypes = { "html", "css", "vue", "javascript", "svelte", "typescript" },
 			})
+			lspconfig.ts_ls.setup({ capabilities = capabilities })
+			lspconfig.vuels.setup({ capabilities = capabilities })
+			lspconfig.yamlls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition" })
