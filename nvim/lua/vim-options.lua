@@ -49,10 +49,10 @@ vim.keymap.set("n", "<leader>l", ":wincmd l<cr>", { desc = "Move to right pane" 
 vim.keymap.set("n", "<leader>ek", "<C-w>r", { desc = "Swap Vertical" })
 vim.keymap.set("n", "<leader>el", "<C-w>R", { desc = "Swap Horizonal" })
 
-vim.keymap.set("n", "<C-h>", ":vertical resize -3<CR>", { desc = "Vertical Resize Right" })
-vim.keymap.set("n", "<C-k>", ":resize -3<CR>", { desc = "Vertical Resize Up" })
-vim.keymap.set("n", "<C-l>", ":vertical resize +3<CR>", { desc = "Vertical Resize Left" })
-vim.keymap.set("n", "<C-j>", ":resize +3<CR>", { desc = "Vertical Resize Down" })
+vim.keymap.set("n", "<C-l>", ":vertical resize -3<CR>", { desc = "Vertical Resize Right" })
+vim.keymap.set("n", "<C-j>", ":resize -3<CR>", { desc = "Vertical Resize Up" })
+vim.keymap.set("n", "<C-h>", ":vertical resize +3<CR>", { desc = "Vertical Resize Left" })
+vim.keymap.set("n", "<C-k>", ":resize +3<CR>", { desc = "Vertical Resize Down" })
 
 -- windows
 vim.keymap.set("n", "<leader>sv", ":vs<cr>", { desc = "Split Vertical" })
