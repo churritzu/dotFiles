@@ -45,6 +45,12 @@ return {
 		)
 		vim.keymap.set(
 			"n",
+			"<leader>re",
+			'<cmd>lua require("kulala").set_selected_env()<CR>',
+			{ desc = "Set Environment" }
+		)
+		vim.keymap.set(
+			"n",
 			"<leader>rt",
 			"<cmd>lua require('kulala').scrathcpad()<CR>",
 			{ noremap = true, desc = "Show scratchpad" }
