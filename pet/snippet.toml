@@ -10,3 +10,9 @@
   Output = ""
   Tag = ["Docker", "Containers", "Dev"]
   command = "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash"
+
+[[Snippets]]
+  Description = "Create a MariaDb/MySql backup from a docker."
+  Output = ""
+  Tag = ["mysql", "mariadb", "sql", "backup"]
+  command = "mysqldump -h 127.0.0.1 -P 3306 -u root -p dbname > dbname_$(date +\"%Y%m%d\").sql"
